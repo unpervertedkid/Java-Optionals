@@ -20,16 +20,10 @@ public class Main {
         System.out.println(orElse);
 
         //ifpresent
-        hello.ifPresent(word -> {
-            System.out.println(word.toUpperCase());
-        });
+        hello.ifPresent(word -> System.out.println(word.toUpperCase()));
 
         //ifPresentOrElse
-        hello.ifPresentOrElse(word ->{
-            System.out.println(word);
-        }, () -> {
-            System.out.println("World");
-        });
+        hello.ifPresentOrElse(System.out::println, () -> System.out.println("World"));
 
     }
 }
